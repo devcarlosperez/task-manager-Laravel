@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Models\Task;
+use App\Models\Task;
 use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
