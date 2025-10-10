@@ -56,22 +56,22 @@ Follow these steps to run the application locally with [Laragon](https://laragon
 
 - `app/` - Application core (models, controllers, etc.).
 - `resources/views/` - Blade templates for the UI.
-- `routes/` - Route definitions
-- `database/migrations/` - Database schema migrations
-- `database/seeders/` - Database seeders
-- `public/` - Public assets and entry point
-- `config/` - Configuration files
+- `routes/` - Route definitions.
+- `database/migrations/` - Database schema migrations.
+- `database/seeders/` - Database seeders.
+- `public/` - Public assets and entry point.
+- `config/` - Configuration files.
 
 ## Build With 🛠️
 
 - [Laragon](https://laragon.org/)
 - [Laravel](https://laravel.com/)
-- [Laravel Breeze](https://laravel.com/docs/starter-kits#laravel-breeze)
+- [Laravel Breeze](https://laravel.com/docs/10.x/starter-kits)
 - [MySQL](https://www.mysql.com/)
 
 ## Tutorials 🎓
 
-- [Laravel Breeze](https://www.youtube.com/watch?v=3hRkE64YIqg)
+- [Laravel Breeze](https://laravel.com/docs/10.x/starter-kits)
 
 ## Suggestions 💡
 
