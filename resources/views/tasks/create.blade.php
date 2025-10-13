@@ -30,31 +30,37 @@
         @endisset
         <main>
             <h1>Create a new task</h1>
-            <form method="POST" action="{{ route('tasks.store') }}">
-                @csrf
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" class="form-control" id="name"
-                        placeholder="Enter task name">
+            <div class="py-12">
+                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                        <div class="p-6 text-gray-900 dark:text-gray-100">
+                            <form method="POST" action="{{ route('tasks.store') }}">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" class="form-control" id="name"
+                                        placeholder="Enter task name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <input type="text" name="description" class="form-control" id="description"
+                                        placeholder="Enter task description">
+                                </div>
+                                <div class="form-group">
+                                    <label for="priority">Priority</label>
+                                    <select name="priority" id="priority" class="form-control text-gray-900">
+                                        <option value="low">Low</option>
+                                        <option value="medium">Medium</option>
+                                        <option value="high">High</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <input type="text" name="description" class="form-control" id="description"
-                        placeholder="Enter task description">
-                </div>
-                <div class="form-group">
-                    <label for="priority">Priority</label>
-                    <select name="priority" id="priority" class="form-control">
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-            <div>
-                <a href="{{ route('tasks.create') }}">Add a new task</a>
             </div>
         </main>
     </div>
 </body>
+</html>
