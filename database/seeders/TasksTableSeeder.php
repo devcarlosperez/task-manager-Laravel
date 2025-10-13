@@ -16,13 +16,18 @@ class TasksTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-          ['name' => 'Usuario 1', 'email' => 'usuario4@gmail.com',
+          ['name' => 'User 1', 'email' => 'user1@gmail.com',
+          'password' => Hash::make('12345678')],
+        ]);
+
+        DB::table('users')->insert([
+          ['name' => 'User 2', 'email' => 'user2@gmail.com',
           'password' => Hash::make('12345678')],
         ]);
 
         DB::table('tasks')->insert([
-          ['user_id' => '1', 'name' => 'Tarea 1',
-          'description' => 'Hola, esta es mi primera tarea', 'priority' => 'high'],
+          ['user_id' => '1', 'name' => 'Task 1',
+          'description' => 'Hi, this is my first task', 'priority' => 'high'],
         ]);
     }
 }

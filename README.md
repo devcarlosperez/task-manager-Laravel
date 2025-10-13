@@ -46,7 +46,12 @@ Follow these steps to run the application locally with [Laragon](https://laragon
    php artisan migrate
    ```
 
-6. **Enjoy**
+6. **Run seeder:**
+   ```sh
+   php artisan db:seed --class=TasksTableSeeder
+   ```
+
+7. **Enjoy**
    ```sh
    php artisan serve
    ```
@@ -66,12 +71,12 @@ Follow these steps to run the application locally with [Laragon](https://laragon
 
 - [Laragon](https://laragon.org/)
 - [Laravel](https://laravel.com/)
-- [Laravel Breeze](https://laravel.com/docs/10.x/starter-kits)
 - [MySQL](https://www.mysql.com/)
 
-## Tutorials 🎓
+## Third-party Components Used 🖇️
 
 - [Laravel Breeze](https://laravel.com/docs/10.x/starter-kits)
+- [Heroicons](https://heroicons.com/)
 
 ## Suggestions 💡
 
