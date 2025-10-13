@@ -31,15 +31,22 @@
         <main>
             <h1>List of Tasks</h1>
             <ul>
-                @foreach ($tasks as $b)
-                    <h3>{{ $b->name }}</h3>
-                    <p>{{ $b->description }}</p>
-                    <p>{{ $b->priority }}</p>
-                @endforeach
+                <div class="py-12">
+                    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                        @foreach ($tasks as $b)
+                            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-4">
+                                <div class="p-6 text-gray-900 dark:text-gray-100">
+                                    <h3>{{ $b->name }}</h3>
+                                    <p>{{ $b->description }}</p>
+                                    <p>{{ $b->priority }}</p>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
             </ul>
-            <div>
-                <a href="{{ route('tasks.create') }}">Add a new task</a>
-            </div>
         </main>
     </div>
 </body>
+
+</html>
