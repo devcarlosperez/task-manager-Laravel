@@ -38,17 +38,20 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="name">Name</label>
-                                    <input type="text" name="name" class="form-control" id="name"
+                                    <input type="text" name="name" id="name"
+                                        class="form-control bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-600"
                                         placeholder="Enter task name">
                                 </div>
                                 <div class="form-group">
                                     <label for="description">Description</label>
-                                    <input type="text" name="description" class="form-control" id="description"
+                                    <input type="text" name="description" id="description"
+                                        class="form-control bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-600"
                                         placeholder="Enter task description">
                                 </div>
                                 <div class="form-group">
                                     <label for="priority">Priority</label>
-                                    <select name="priority" id="priority" class="form-control text-gray-900">
+                                    <select name="priority" id="priority"
+                                        class="form-control bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-600">
                                         <option value="low">Low</option>
                                         <option value="medium">Medium</option>
                                         <option value="high">High</option>

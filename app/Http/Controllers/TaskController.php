@@ -58,7 +58,7 @@ class TaskController extends Controller
     {
       $task = Auth::user()->tasks()->find($id);
       $task->delete();
-      
+
       return redirect()->route('tasks.index');
     }
 }
