@@ -29,43 +29,39 @@
                 </div>
             </header>
         @endisset
-        <main>
-            <h1>Edit the task</h1>
-            <div class="py-12">
-                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                        <div class="p-6 text-gray-900 dark:text-gray-100">
-                            <form method="POST" action="{{ route('tasks.update', $task->id) }}">
-                                @csrf
-                                @method('PUT')
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" name="name" id="name"
-                                        class="form-control bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-600"
-                                        placeholder="{{ $task->name }}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="description">Description</label>
-                                    <input type="text" name="description" id="description"
-                                        class="form-control bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-600"
-                                        placeholder="{{ $task->description }}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="priority">Priority</label>
-                                    <select name="priority" id="priority"
-                                        class="form-control bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-600">
-                                        <option value="low" {{ $task->priority == 'low' ? 'selected' : '' }}>Low
-                                        </option>
-                                        <option value="medium" {{ $task->priority == 'medium' ? 'selected' : '' }}>
-                                            Medium</option>
-                                        <option value="high" {{ $task->priority == 'high' ? 'selected' : '' }}>High
-                                        </option>
-                                    </select>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
+        <main class="form-main">
+            <h1 class="form-title">Edit Task</h1>
+
+            <div class="form-wrapper">
+                <div class="form-card">
+                    <form method="POST" action="{{ route('tasks.update', $task->id) }}" class="task-form">
+                        @csrf
+                        @method('PUT')
+
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" class="form-input"
+                                value="{{ $task->name }}" placeholder="Enter task name">
                         </div>
-                    </div>
+
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" name="description" id="description" class="form-input"
+                                value="{{ $task->description }}" placeholder="Enter task description">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="priority">Priority</label>
+                            <select name="priority" id="priority" class="form-select">
+                                <option value="low" {{ $task->priority == 'low' ? 'selected' : '' }}>Low</option>
+                                <option value="medium" {{ $task->priority == 'medium' ? 'selected' : '' }}>Medium
+                                </option>
+                                <option value="high" {{ $task->priority == 'high' ? 'selected' : '' }}>High</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Update Task</button>
+                    </form>
                 </div>
             </div>
         </main>

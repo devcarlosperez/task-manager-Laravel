@@ -29,47 +29,39 @@
                 </div>
             </header>
         @endisset
-        <main>
-            <h1>List of Tasks</h1>
-            <ul>
-                <div class="py-12">
-                    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                        @foreach ($tasks as $b)
-                            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-4">
-                                <div class="p-6 text-gray-900 dark:text-gray-100">
-                                    <h3>{{ $b->name }}</h3>
-                                    <p>{{ $b->description }}</p>
-                                    <p>{{ $b->priority }}</p>
-                                </div>
-                                <button onclick="window.location='{{ route('tasks.edit', $b->id) }}'"
-                                    title="Editar"
-                                    class="text-blue-600 hover:text-blue-800">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                        class="w-6">
-                                        <path fill-rule="evenodd"
-                                            d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H3.989a.75.75 0 0 0-.75.75v4.242a.75.75 0 0 0 1.5 0v-2.43l.31.31a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.449-.39Zm1.23-3.723a.75.75 0 0 0 .219-.53V2.929a.75.75 0 0 0-1.5 0V5.36l-.31-.31A7 7 0 0 0 3.239 8.188a.75.75 0 1 0 1.448.389A5.5 5.5 0 0 1 13.89 6.11l.311.31h-2.432a.75.75 0 0 0 0 1.5h4.243a.75.75 0 0 0 .53-.219Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+        <main class="tasks-main">
+            <h1 class="tasks-title">List of Tasks</h1>
+
+            <ul class="tasks-list">
+                <div class="tasks-wrapper">
+                    @foreach ($tasks as $b)
+                        <div class="task-card">
+                            <div class="task-content">
+                                <h3 class="task-title">{{ $b->name }}</h3>
+                                <p class="task-description">{{ $b->description }}</p>
+                                <p class="task-priority">{{ $b->priority }}</p>
+                            </div>
+
+                            <div class="task-actions">
+                                <button onclick="window.location='{{ route('tasks.edit', $b->id) }}'" title="Editar"
+                                    class="task-btn edit-btn text-blue-600 hover:text-blue-800">
+                                    Edit
                                 </button>
+
                                 <form method="POST" action="{{ route('tasks.destroy', $b->id) }}">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit"
-                                        class="text-red-600 hover:text-red-800">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                            class="w-6">
-                                            <path fill-rule="evenodd"
-                                                d="M8.75 1A2.75 2.75 0 0 0 6 3.75v.443c-.795.077-1.584.176-2.365.298a.75.75 0 1 0 .23 1.482l.149-.022.841 10.518A2.75 2.75 0 0 0 7.596 19h4.807a2.75 2.75 0 0 0 2.742-2.53l.841-10.52.149.023a.75.75 0 0 0 .23-1.482A41.03 41.03 0 0 0 14 4.193V3.75A2.75 2.75 0 0 0 11.25 1h-2.5Z"
-                                                clip-rule="evenodd" />
-                                        </svg>
+                                    <button type="submit" class="task-btn delete-btn text-red-600 hover:text-red-800">
+                                        Delete
                                     </button>
                                 </form>
                             </div>
-                        @endforeach
-                    </div>
+                        </div>
+                    @endforeach
                 </div>
             </ul>
         </main>
+
     </div>
 </body>
 

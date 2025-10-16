@@ -1,0 +1,222 @@
+/* Fondo general y altura mínima */
+.tasks-main {
+  min-height: 100vh; /* hace que llegue hasta abajo de la página */
+  background-color: #ffffff;
+  padding: 3rem 1rem;
+}
+
+/* Título principal */
+.tasks-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor de tarjetas */
+.tasks-wrapper {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tarjetas */
+.task-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  padding: 1.25rem;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenido */
+.task-content {
+  margin-bottom: 1rem;
+}
+
+.task-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.task-description {
+  color: #4b5563;
+  margin: 0.25rem 0;
+}
+
+.task-priority {
+  font-weight: 500;
+  color: #2563eb;
+}
+
+/* Acciones */
+.task-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Botones */
+.task-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+/* Editar */
+.edit-btn:hover {
+  color: #1d4ed8;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .tasks-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tasks-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* === FORMULARIO DE CREAR TAREAS === */
+
+.form-main {
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 640px;
+}
+
+.form-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  transition: all 0.2s ease;
+}
+
+.form-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === CAMPOS DEL FORMULARIO === */
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #111827;
+}
+
+.form-input,
+.form-select {
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #111827;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* === BOTÓN DE ENVIAR === */
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* === MODO OSCURO === */
+
+.dark .form-main {
+  background-color: #111827;
+}
+
+.dark .form-card {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+.dark .form-group label {
+  color: #f9fafb;
+}
+
+.dark .form-input,
+.dark .form-select {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #f9fafb;
+}
+
+.dark .form-input:focus,
+.dark .form-select:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.dark .btn-primary {
+  background-color: #3b82f6;
+}
+
+.dark .btn-primary:hover {
+  background-color: #2563eb;
+}
