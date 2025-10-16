@@ -40,7 +40,9 @@
                                     <p>{{ $b->description }}</p>
                                     <p>{{ $b->priority }}</p>
                                 </div>
-                                <button>
+                                <button onclick="window.location='{{ route('tasks.edit', $b->id) }}'"
+                                    title="Editar"
+                                    class="text-blue-600 hover:text-blue-800">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                                         class="w-6">
                                         <path fill-rule="evenodd"
@@ -51,8 +53,9 @@
                                 <form method="POST" action="{{ route('tasks.destroy', $b->id) }}">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    <button type="submit"
+                                        class="text-red-600 hover:text-red-800">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                                             class="w-6">
                                             <path fill-rule="evenodd"
                                                 d="M8.75 1A2.75 2.75 0 0 0 6 3.75v.443c-.795.077-1.584.176-2.365.298a.75.75 0 1 0 .23 1.482l.149-.022.841 10.518A2.75 2.75 0 0 0 7.596 19h4.807a2.75 2.75 0 0 0 2.742-2.53l.841-10.52.149.023a.75.75 0 0 0 .23-1.482A41.03 41.03 0 0 0 14 4.193V3.75A2.75 2.75 0 0 0 11.25 1h-2.5Z"
@@ -68,3 +71,5 @@
         </main>
     </div>
 </body>
+
+</html>
