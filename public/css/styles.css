@@ -1,11 +1,9 @@
-/* Fondo general y altura mínima */
 .tasks-main {
-  min-height: 100vh; /* hace que llegue hasta abajo de la página */
+  min-height: 100vh;
   background-color: #ffffff;
   padding: 3rem 1rem;
 }
 
-/* Título principal */
 .tasks-title {
   font-size: 1.75rem;
   font-weight: 600;
@@ -14,7 +12,6 @@
   margin-bottom: 2rem;
 }
 
-/* Contenedor de tarjetas */
 .tasks-wrapper {
   display: grid;
   gap: 1.5rem;
@@ -22,7 +19,6 @@
   margin: 0 auto;
 }
 
-/* Tarjetas */
 .task-card {
   background-color: #f9fafb;
   border: 1px solid #e5e7eb;
@@ -37,7 +33,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Contenido */
 .task-content {
   margin-bottom: 1rem;
 }
@@ -58,7 +53,6 @@
   color: #2563eb;
 }
 
-/* Acciones */
 .task-actions {
   display: flex;
   justify-content: flex-start;
@@ -66,7 +60,6 @@
   gap: 0.75rem;
 }
 
-/* Botones */
 .task-btn {
   cursor: pointer;
   background: transparent;
@@ -74,25 +67,9 @@
   transition: all 0.2s ease;
 }
 
-/* Editar */
 .edit-btn:hover {
   color: #1d4ed8;
 }
-
-/* Responsive */
-@media (min-width: 640px) {
-  .tasks-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .tasks-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* === FORMULARIO DE CREAR TAREAS === */
 
 .form-main {
   min-height: 100vh;
@@ -130,8 +107,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* === CAMPOS DEL FORMULARIO === */
-
 .task-form {
   display: flex;
   flex-direction: column;
@@ -167,8 +142,6 @@
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
-/* === BOTÓN DE ENVIAR === */
-
 .btn-primary {
   background-color: #2563eb;
   color: #ffffff;
@@ -185,38 +158,80 @@
   transform: translateY(-1px);
 }
 
-/* === MODO OSCURO === */
-
-.dark .form-main {
-  background-color: #111827;
+.welcome-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f9fafb;
 }
 
-.dark .form-card {
-  background-color: #1f2937;
-  border-color: #374151;
+.welcome-card {
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    max-width: 480px;
+    width: 90%;
 }
 
-.dark .form-group label {
-  color: #f9fafb;
+.welcome-title {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    font-family: 'Figtree', sans-serif;
 }
 
-.dark .form-input,
-.dark .form-select {
-  background-color: #374151;
-  border-color: #4b5563;
-  color: #f9fafb;
+.welcome-text {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+    font-family: 'Figtree', sans-serif;
 }
 
-.dark .form-input:focus,
-.dark .form-select:focus {
-  border-color: #60a5fa;
-  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+.welcome-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
 }
 
-.dark .btn-primary {
-  background-color: #3b82f6;
+.welcome-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Figtree', sans-serif;
 }
 
-.dark .btn-primary:hover {
-  background-color: #2563eb;
+.login-btn {
+    background-color: #2563eb;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #1e40af;
+}
+
+.register-btn {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.register-btn:hover {
+    background-color: #d1d5db;
+}
+
+@media (min-width: 640px) {
+  .tasks-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tasks-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
