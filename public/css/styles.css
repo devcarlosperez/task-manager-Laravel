@@ -159,76 +159,76 @@
 }
 
 .no-tasks {
-    text-align: center;
-    color: #555;
-    margin: 20px 0;
-    font-size: 1rem;
+  text-align: center;
+  color: #555;
+  margin: 20px 0;
+  font-size: 1rem;
 }
 
 .welcome-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f9fafb;
 }
 
 .welcome-card {
-    background: #ffffff;
-    padding: 3rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    max-width: 480px;
-    width: 90%;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  max-width: 480px;
+  width: 90%;
 }
 
 .welcome-title {
-    font-size: 1.875rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1rem;
-    font-family: 'Figtree', sans-serif;
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  font-family: 'Figtree', sans-serif;
 }
 
 .welcome-text {
-    font-size: 1rem;
-    color: #6b7280;
-    margin-bottom: 2rem;
-    font-family: 'Figtree', sans-serif;
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  font-family: 'Figtree', sans-serif;
 }
 
 .welcome-actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .welcome-btn {
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-    font-family: 'Figtree', sans-serif;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  font-family: 'Figtree', sans-serif;
 }
 
 .login-btn {
-    background-color: #2563eb;
-    color: white;
+  background-color: #2563eb;
+  color: white;
 }
 
 .login-btn:hover {
-    background-color: #1e40af;
+  background-color: #1e40af;
 }
 
 .register-btn {
-    background-color: #e5e7eb;
-    color: #374151;
+  background-color: #e5e7eb;
+  color: #374151;
 }
 
 .register-btn:hover {
-    background-color: #d1d5db;
+  background-color: #d1d5db;
 }
 
 @media (min-width: 640px) {

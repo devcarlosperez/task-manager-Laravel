@@ -16,19 +16,49 @@ class TasksTableSeeder extends Seeder
     public function run(): void
   {
     DB::table('users')->insert([
-        ['name' => 'User 1', 'email' => 'user1@gmail.com', 'password' => Hash::make('12345678')],
-        ['name' => 'User 2', 'email' => 'user2@gmail.com', 'password' => Hash::make('12345678')],
-        ['name' => 'User 3', 'email' => 'user3@gmail.com', 'password' => Hash::make('12345678')],
-        ['name' => 'User 4', 'email' => 'user4@gmail.com', 'password' => Hash::make('12345678')],
-    ]);
+    ['name' => 'Carlos Lopez', 'email' => 'carlos.lopez@gmail.com', 'password' => Hash::make('12345678')],
+    ['name' => 'Maria Fernandez', 'email' => 'maria.fernandez@gmail.com', 'password' => Hash::make('12345678')],
+    ['name' => 'John Perez', 'email' => 'john.perez@gmail.com', 'password' => Hash::make('12345678')],
+    ['name' => 'Laura Gomez', 'email' => 'laura.gomez@gmail.com', 'password' => Hash::make('12345678')],
+]);
 
     DB::table('tasks')->insert([
-        ['user_id' => 1, 'name' => 'Task 1', 'description' => 'Hi, this is my first task', 'priority' => 'high'],
-        ['user_id' => 1, 'name' => 'Task 2', 'description' => 'Second task for user 1', 'priority' => 'medium'],
-        ['user_id' => 2, 'name' => 'Task 3', 'description' => 'User 2 task example', 'priority' => 'low'],
-        ['user_id' => 2, 'name' => 'Task 4', 'description' => 'Another task for user 2', 'priority' => 'high'],
-        ['user_id' => 3, 'name' => 'Task 5', 'description' => 'Task for user 3', 'priority' => 'medium'],
-        ['user_id' => 4, 'name' => 'Task 6', 'description' => 'Task for user 4', 'priority' => 'low'],
-    ]);
+    [
+        'user_id' => 1,
+        'name' => 'Prepare monthly report',
+        'description' => 'Collect sales data and prepare the financial report for September.',
+        'priority' => 'high',
+    ],
+    [
+        'user_id' => 1,
+        'name' => 'Update client database',
+        'description' => 'Review and update contact information for active clients.',
+        'priority' => 'medium',
+    ],
+    [
+        'user_id' => 2,
+        'name' => 'Design new promotional banner',
+        'description' => 'Create a banner for the upcoming autumn marketing campaign.',
+        'priority' => 'high',
+    ],
+    [
+        'user_id' => 2,
+        'name' => 'Review website content',
+        'description' => 'Check for typos and update the homepage text with new product details.',
+        'priority' => 'low',
+    ],
+    [
+        'user_id' => 3,
+        'name' => 'Set up testing server',
+        'description' => 'Install dependencies and configure the environment for the new project.',
+        'priority' => 'medium',
+    ],
+    [
+        'user_id' => 4,
+        'name' => 'Handle support requests',
+        'description' => 'Respond to pending support tickets and document frequent issues.',
+        'priority' => 'high',
+    ],
+]);
   }
 }
