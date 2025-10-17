@@ -80,6 +80,8 @@ Follow these steps to run the application locally with [Laragon](https://laragon
 
 ## Suggestions 💡
 
+- Set priorities to organize your tasks better.  
+- Regularly check and update your tasks to stay productive.  
 
 ## Acknowledgments 🎁
 

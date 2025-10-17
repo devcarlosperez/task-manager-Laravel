@@ -16,7 +16,7 @@
 <body class="font-sans antialiased bg-gray-100 dark:bg-gray-900">
     <main class="welcome-main">
         <section class="welcome-card">
-            <h1 class="welcome-title">Welcome to {{ config('app.name', 'Task Manager') }}</h1>
+            <h1 class="welcome-title">Welcome to your Task Manager</h1>
             <p class="welcome-text">
                 Manage your tasks easily, stay productive and organized every day.
             </p>
