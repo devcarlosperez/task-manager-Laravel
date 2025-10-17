@@ -76,7 +76,7 @@ Follow these steps to run the application locally with [Laragon](https://laragon
 ## Third-party Components Used 🖇️
 
 - [Laravel Breeze](https://laravel.com/docs/10.x/starter-kits)
-- [Heroicons](https://heroicons.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Suggestions 💡
 
