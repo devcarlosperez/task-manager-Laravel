@@ -31,38 +31,40 @@
         @endisset
         <main class="tasks-main">
             <h1 class="tasks-title">List of Tasks</h1>
+            <div class="tasks-container">
+                @if ($tasks->isEmpty())
+                    <div class="no-tasks">
+                        <p>You don’t have any tasks yet. Add your first one!</p>
+                    </div>
+                @else
+                    <div class="tasks-wrapper">
+                        @foreach ($tasks as $b)
+                            <div class="task-card">
+                                <div class="task-content">
+                                    <h3 class="task-title">{{ $b->name }}</h3>
+                                    <p class="task-description">{{ $b->description }}</p>
+                                    <p class="task-priority">{{ $b->priority }}</p>
+                                </div>
 
-            <ul class="tasks-list">
-                <div class="tasks-wrapper">
-                    @foreach ($tasks as $b)
-                        <div class="task-card">
-                            <div class="task-content">
-                                <h3 class="task-title">{{ $b->name }}</h3>
-                                <p class="task-description">{{ $b->description }}</p>
-                                <p class="task-priority">{{ $b->priority }}</p>
-                            </div>
-
-                            <div class="task-actions">
-                                <button onclick="window.location='{{ route('tasks.edit', $b->id) }}'" title="Editar"
-                                    class="task-btn edit-btn text-blue-600 hover:text-blue-800">
-                                    Edit
-                                </button>
-
-                                <form method="POST" action="{{ route('tasks.destroy', $b->id) }}">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="task-btn delete-btn text-red-600 hover:text-red-800">
-                                        Delete
+                                <div class="task-actions">
+                                    <button onclick="window.location='{{ route('tasks.edit', $b->id) }}'" title="Editar"
+                                        class="task-btn edit-btn text-blue-600 hover:text-blue-800">
+                                        Edit
                                     </button>
-                                </form>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </ul>
-        </main>
 
+                                    <form method="POST" action="{{ route('tasks.destroy', $b->id) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit"
+                                            class="task-btn delete-btn text-red-600 hover:text-red-800">
+                                            Delete
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                @endif
+        </main>
     </div>
 </body>
-
-</html>

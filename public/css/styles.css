@@ -158,6 +158,13 @@
   transform: translateY(-1px);
 }
 
+.no-tasks {
+    text-align: center;
+    color: #555;
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
 .welcome-main {
     display: flex;
     align-items: center;
